@@ -1,0 +1,13 @@
+@use "baseUnit" as base;
+
+$spacing : base.$unit ;
+$spacing-x2 : base.$unit * 2 ;
+$spacing-x3 : base.$unit * 3 ;
+$spacing-x4 : base.$unit * 4 ;
+$spacing-x5 : base.$unit * 5 ;
+
+$spacing-x10 : base.$unit * 10 ;
+$spacing-x100 : base.$unit * 100 ;
+
+$spacing-s2 : base.$unit / 2 ;
+$spaceing-s4: base.$unit / 4 ;

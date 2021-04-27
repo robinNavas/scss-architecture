@@ -1,0 +1,54 @@
+/*
+  Function to interpolate 2 value related to the actual size of the window
+*/
+@use "strip-unit" as stu ;
+
+@mixin fluid-screen( $property, $min , $max , $rangeMin , $rangeMax){
+  $result: 1;
+
+  $u1: unit($rangeMin);
+  $u2: unit($rangeMax);
+  $u3: unit($min);
+  $u4: unit($max);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    &{
+      #{$property}: $min; /* Minimum value */
+
+      /* Interpolated value */
+      @media screen and (min-width: $rangeMin) {
+        #{$property}: calc(#{$min} + #{stu.strip-unit($max - $min)} * ((100vw - #{$rangeMin}) / #{stu.strip-unit($rangeMax - $rangeMin)}));
+      }
+
+      /* Maximum value */
+      @media screen and (min-width: $rangeMax) {
+        #{$property}: $max;
+      }
+    }
+  }
+}
+
+@mixin fluid-screenH( $property, $min , $max , $rangeMin , $rangeMax){
+  $result: 1;
+
+  $u1: unit($rangeMin);
+  $u2: unit($rangeMax);
+  $u3: unit($min);
+  $u4: unit($max);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    &{
+      #{$property}: $min; /* Minimum value */
+
+      /* Interpolated value */
+      @media screen and (min-height: $rangeMin) {
+        #{$property}: calc(#{$min} + #{stu.strip-unit($max - $min)} * ((100vh - #{$rangeMin}) / #{stu.strip-unit($rangeMax - $rangeMin)}));
+      }
+
+      /* Maximum value */
+      @media screen and (min-height: $rangeMax) {
+        #{$property}: $max;
+      }
+    }
+  }
+}

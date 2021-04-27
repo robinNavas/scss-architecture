@@ -1,0 +1,13 @@
+@use 'baseUnit' as base;
+@use 'layout';
+
+$modulation : 1.3;
+
+$font-size-h1:$modulation * $modulation * $modulation * $modulation * base.$unit;
+$line-height-h1 : layout.$spacing;
+
+$font-size-h2:$modulation * $modulation * $modulation * base.$unit;
+$line-height-h2 : layout.$spacing;
+
+$font-size-h3:$modulation * $modulation * base.$unit;
+$line-height-h3 : layout.$spacing;

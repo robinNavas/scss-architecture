@@ -1,0 +1,11 @@
+
+
+Fluid( $min , $max , $rangeMin , $rangeMax, $variable)
+
+Fluid function calculate an interpolation between min and max values according
+to the value and the range given
+
+
+clearfix
+
+Usage : @include t.clearfix();

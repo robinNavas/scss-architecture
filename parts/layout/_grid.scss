@@ -1,0 +1,29 @@
+/** TODO:
+   create a kind of grid system that merge every child element into columns
+   and a way to specify a different width. We could use flexbox to do that
+*/
+
+// for the parent
+.rn-columns{
+  --column-size: 25px;
+  --gap-size: 25px; 
+  background-color: blue;
+
+  display: flex;
+  flex-direction: row;
+
+  justify-content: flex-start;
+  gap: 150px;
+  flex-wrap: wrap;
+
+  div{
+    background-color: yellow;
+    height: 150px;
+    width: 150px;
+  }
+
+  &:last-child{
+    justify-self: flex-start;
+  }
+
+}

@@ -1,0 +1,24 @@
+
+@use "colorTheme1" as theme ;
+
+/* Set the css var for theming default theme 1 */
+:root{
+  --c_primary: #{ theme.$primary } ;
+  --c_on-primary : #{ theme.$on-primary } ;
+
+  --c_secondary : #{ theme.$secondary } ;
+  --c_on-secondary : #{ theme.$on-secondary } ;
+
+  --c_tertiary : #{ theme.$tertiary } ;
+  --c_on-tertiary : #{ theme.$on-tertiary } ;
+
+  --c_shadow : #{ theme.$shadow } ;
+  --c_shadow-light : #{ theme.$shadow-light } ;
+  --c_shadow-transp : #{ theme.$shadow-transp } ;
+
+  --c_background : #{ theme.$background } ;
+  --c_on-background : #{ theme.$on-background } ;
+
+  --c_white : #{ theme.$white } ;
+  --c_black : #{ theme.$black } ;
+}

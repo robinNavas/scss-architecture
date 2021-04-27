@@ -1,0 +1,32 @@
+
+
+/* Set the vars */
+@use "./parts/vars/main" as vars;
+
+
+/* Set the common tools */
+@use "./parts/tools/main" as tools ;
+
+
+/* Set the resets and normalize every thing */
+@use "./parts/resets/main" as resets ;
+
+
+/* Set the global elements stylings */
+@use "./parts/elements/main" as elements ;
+
+
+/* Set some common objects styling */
+@use "./parts/objects/main" as objects ;
+
+
+/* Set the layouts */
+@use "./parts/layout/main" as layout ;
+
+
+/* Call our components styles */
+/*@use "./parts/components/main" ;
+
+
+/* Set the utlities and common mixins */
+@use "./parts/utilities/main" as utility ;
